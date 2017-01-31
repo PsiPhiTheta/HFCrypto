@@ -1,2 +1,2 @@
 # HFCrypto
-A small introductory project into altcoin cryptocurrency high frequency trading
+An altcoin cryptocurrency high frequency trading algorithm
