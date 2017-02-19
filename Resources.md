@@ -1,8 +1,8 @@
-Related Github Repo's 
+# Related Github Repos 
 
 > Poloniex API wrapper (in Python): https://github.com/s4w3d0ff/python-poloniex
 
-Funding contributions
+# Funding contributions
 
 > Tom ~ 0.095 BTC
 
