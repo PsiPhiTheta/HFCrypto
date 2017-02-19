@@ -9,3 +9,9 @@
 > Nico ~ 0 BTC
 
 > Raul ~ 0 BTC
+
+# 3. Blockchain download links
+
+> Gridcoin (~1GB): http://download.gridcoin.us/download/downloadstake/signed/
+
+> Bitcoin (~100GB): https://bitcointalk.org/index.php?topic=1310261.0
