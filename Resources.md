@@ -17,3 +17,7 @@
 > Ethereum (~1.7GB): http://bloopish.com/tools/ethereum/
 
 > Gridcoin (~0.7GB): http://download.gridcoin.us/download/downloadstake/signed/
+
+# 4. Poloniex API documentation
+
+> Available at: https://poloniex.com/support/api/
