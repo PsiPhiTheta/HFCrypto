@@ -12,6 +12,8 @@
 
 # 3. Blockchain download links
 
-> Gridcoin (~1GB): http://download.gridcoin.us/download/downloadstake/signed/
-
 > Bitcoin (~100GB): https://bitcointalk.org/index.php?topic=1310261.0
+
+> Ethereum (1.7GB): http://bloopish.com/tools/ethereum/
+
+> Gridcoin (~0.7GB): http://download.gridcoin.us/download/downloadstake/signed/
