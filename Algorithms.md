@@ -128,6 +128,17 @@ Disadvantages: may not be corrolated to currency performance
 
 > Include consensus: YES (Tom, ?, ?)
 
+# 14. Twitter tracking (algo)
+
+Description: Monitors twitter sentiments to predict future performance of coins.
+
+Advantages: prooved to be corrolated to currency performance (http://cs229.stanford.edu/proj2015/029_report.pdf)
+
+Disadvantages: may be extremely hard to code (requires AI analysis and translation of words into trading advantages) 
+
+> Include consensus: YES (Tom, ?, ?)
+
+
 # Sources
 
 - investopedia.com 
