@@ -25,3 +25,5 @@
 # 5. Cryptocurrency traders experiences
 
 > High frequency: http://www.coindesk.com/high-frequency-trading-on-the-coinbase-exchange/
+
+> Bitcoin only: http://www.wildbunny.co.uk/blog/2014/06/11/algorithmic-trading-with-bitcoin-part-1/
