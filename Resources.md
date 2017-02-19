@@ -5,5 +5,7 @@ Related Github Repo's
 Funding contributions
 
 > Tom ~ 0.095 BTC
+
 > Nico ~ 0 BTC
+
 > Raul ~ 0 BTC
