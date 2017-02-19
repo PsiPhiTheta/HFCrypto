@@ -39,3 +39,9 @@
 > Tom's Pavillion DV6 (4 core, 6GB RAM)
 
 > Online testing platforms: https://cryptotrader.org/ 
+
+# 8. Ask the experts
+
+> Reddit: https://www.reddit.com/r/BitcoinMarkets/
+
+> StackExchange: https://bitcoin.stackexchange.com/
