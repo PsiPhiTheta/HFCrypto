@@ -108,6 +108,6 @@ Disadvantages: may not be corrolated to currency performance
 
 > Include consensus: YES (Tom, ?, ?)
 
+# Sources
 
-
-- Sources: investopedia.com, 
+- investopedia.com 
