@@ -98,6 +98,14 @@ Disadvantages:
 
 > Include consensus: ? (?, ?, ?)
 
+# 11. Tom's Github tracking (algo)
 
+Description: Monitors cryptocurrency's Github activity (number of issues resolved, commit rate, page hits...) to predict future performance of coin.
 
-Sources: investopedia.com, 
+Advantages: simple to code
+
+Disadvantages: may not be corrolated to currency performance
+
+> Include consensus: YES (Tom, ?, ?)
+
+- Sources: investopedia.com, 
