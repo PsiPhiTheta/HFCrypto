@@ -108,6 +108,26 @@ Disadvantages: may not be corrolated to currency performance
 
 > Include consensus: YES (Tom, ?, ?)
 
+# 12. Tom's google searches tracking (algo)
+
+Description: Monitors cryptocurrency's google search frequency to predict future performance of coin.
+
+Advantages: simple to code
+
+Disadvantages: may not be corrolated to currency performance
+
+> Include consensus: YES (Tom, ?, ?)
+
+# 13. Tom's main webpage hits tracking (algo)
+
+Description: Monitors cryptocurrency's main webpage hits frequency to predict future performance of coin.
+
+Advantages: simple to code
+
+Disadvantages: may not be corrolated to currency performance
+
+> Include consensus: YES (Tom, ?, ?)
+
 # Sources
 
 - investopedia.com 
