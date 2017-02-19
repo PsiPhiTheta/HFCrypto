@@ -21,3 +21,7 @@
 # 4. Poloniex API documentation
 
 > Available at: https://poloniex.com/support/api/
+
+# 5. Cryptocurrency traders experiences
+
+> High frequency: http://www.coindesk.com/high-frequency-trading-on-the-coinbase-exchange/
