@@ -31,3 +31,11 @@
 # 6. Existing Open-Source bots
 
 > 
+
+# 7. Backtesting resources
+
+> Online computing platforms: Google Cloud Compute, Microsoft Azure ...
+
+> Tom's Pavillion DV6 (4 core, 6GB RAM)
+
+> Online testing platforms: https://cryptotrader.org/ 
