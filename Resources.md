@@ -1,6 +1,8 @@
 # 1. Related Github Repos 
 
 > Poloniex API wrapper (in Python): https://github.com/s4w3d0ff/python-poloniex
+> ML from scratch (in Python): https://github.com/eriklindernoren/ML-From-Scratch
+
 
 # 2. Funding contributions
 
