@@ -6,14 +6,26 @@ import numpy as np
 clf = MLPClassifier(activation='relu', solver='adam', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1,
                     max_iter=200)
 
+
 # Reading data back
-with open('data.json', 'r') as f:
-    new_data = json.load(f)
+with open('data.json', 'r') as outfile:
+    data = json.load(outfile)
+    # Fetch data into X
+    X = np.zeros([len(data), 7])
+    y = np.zeros([len(data)])
+    for i in range(0, 10):
+        X[i][0] = data[i]['high']
+        X[i][1] = data[i]['quoteVolume']
+        X[i][2] = data[i]['volume']
+        X[i][3] = data[i]['low']
+        X[i][4] = data[i]['close']
+        X[i][5] = data[i]['weightedAverage']
+        X[i][6] = data[i]['open']
+    for i in range(0, 10 - 1):
+        print("X[i+1] = " + str(X[i + 1][6]) + " | X[i] = " + str(X[i][6]))
+        y[i] = np.round(100.0 * X[i + 1][6] / X[i][6])
 
-print(new_data[0])
 
-# Fetch data into X
-# X = np.zeros(7, len(data))
-# for i in range(0, len(data)):
-#     for j in range(0, 7):
-#         X[j,i] = data
+clf.fit(X, y)
+print(clf.predict(X[10]))
+

@@ -16,7 +16,7 @@ with open('data.json', 'w') as f:
     json.dump(data, f)
 
 # Reading data back
-with open('data.json', 'r') as f:
-    new_data = json.load(f)
+# with open('data.json', 'r') as f:
+#     new_data = json.load(f)
+#     print(new_data[0])
 
-print(new_data == data)
