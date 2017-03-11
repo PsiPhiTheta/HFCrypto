@@ -11,7 +11,7 @@ monero_data = ()
 
 # Reading data back
 with open('gridcoin.json', 'r') as outfile:
-    gridcoin_data = json.load(outfile)
+    data = json.load(outfile)
 
     # Fetch data into X
     X = np.zeros([len(data), 7])
