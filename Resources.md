@@ -47,3 +47,7 @@
 > Reddit: https://www.reddit.com/r/BitcoinMarkets/
 
 > StackExchange: https://bitcoin.stackexchange.com/
+
+# 9. Perceptron / Sigmoid neurons 
+
+> http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html#sklearn.neural_network.MLPClassifier
