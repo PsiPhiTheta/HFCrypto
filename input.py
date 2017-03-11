@@ -12,7 +12,7 @@ data = json.loads(response.read())
 
 
 # Writing JSON data
-with open('data.json', 'w') as f:
+with open('monero.json', 'w') as f:
     json.dump(data, f)
 
 # Reading data back
