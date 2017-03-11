@@ -6,12 +6,13 @@ import time
 import hmac, hashlib
 
 url = ""
+
 response = urllib2.urlopen(url)
 data = json.loads(response.read())
 
 
 # Writing JSON data
-with open('', 'w') as f:
+with open('monero.json', 'w') as f:
     json.dump(data, f)
 
 # Reading data back

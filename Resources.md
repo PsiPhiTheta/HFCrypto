@@ -24,6 +24,10 @@
 
 > Available at: https://poloniex.com/support/api/
 
+> Training feature 1 - https://poloniex.com/public?command=returnTradeHistory&currencyPair=BTC_GRC&start=1410158341&end=1410499372
+
+> Training feature 2 - https://poloniex.com/public?command=returnChartData&currencyPair=BTC_XMR&start=1405699200&end=9999999999&period=14400 
+
 # 5. Cryptocurrency traders experiences
 
 > High frequency: http://www.coindesk.com/high-frequency-trading-on-the-coinbase-exchange/
