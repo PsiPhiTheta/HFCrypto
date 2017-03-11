@@ -12,8 +12,8 @@ with open('data.json', 'r') as outfile:
     data = json.load(outfile)
     # Fetch data into X
     X = np.zeros([len(data), 7])
-    y = np.zeros([len(data)])
-    for i in range(0, 10):
+    y = np.zeros([len(data) - 1])
+    for i in range(0, len(X)):
         X[i][0] = data[i]['high']
         X[i][1] = data[i]['quoteVolume']
         X[i][2] = data[i]['volume']
@@ -21,11 +21,12 @@ with open('data.json', 'r') as outfile:
         X[i][4] = data[i]['close']
         X[i][5] = data[i]['weightedAverage']
         X[i][6] = data[i]['open']
-    for i in range(0, 10 - 1):
-        print("X[i+1] = " + str(X[i + 1][6]) + " | X[i] = " + str(X[i][6]))
-        y[i] = np.round(100.0 * X[i + 1][6] / X[i][6])
+    for i in range(0, len(X) - 1):
+        print(np.round(10000.0 * (X[i + 1][6] - X[i][6])))
+        y[i] = np.round(10000.0 * (X[i + 1][6] - X[i][6]))
 
-
+X = X[0: len(X) - 1]
 clf.fit(X, y)
-print(clf.predict(X[10]))
+print(X[0])
+print("Final result: " + str(clf.predict([X[0]])))
 
