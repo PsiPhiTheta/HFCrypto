@@ -6,12 +6,6 @@ import numpy as np
 clf = MLPRegressor(activation='relu', solver='adam', alpha=1e-5, hidden_layer_sizes=(80, 35, 25, 10), random_state=1,
                     max_iter=2000)
 
-btc_dash = ()
-btc_eth = ()
-btc_ltc = ()
-btc_xmr = ()
-grc_btc = ()
-
 with open('json/btc-dash.json', 'r') as f:
     btc_dash = json.load(f)
 with open('json/btc-eth.json', 'r') as f:
