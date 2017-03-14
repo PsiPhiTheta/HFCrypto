@@ -1,8 +1,5 @@
-import numpy as np
 import requests
-import numbers
-
-
+import numpy as np
 
 def returnTicker():
     url = "https://poloniex.com/public?command=returnTicker"
@@ -61,38 +58,41 @@ def returnLoanOrders(currency):
 
 def loanOrderParser(input, output):
     for i in input:
-        averageRate = 0.0
+        totalRate = 0.0
         numberOrders = 0
+        totalAmount = 0.0
         for a in range(0, len(input[i])):
             x = input[i][a]['rate']
-            averageRate += float(x)
+            y = input[i][a]['amount']
+            totalAmount += float(y)
+            totalRate += float(x)
             numberOrders += 1
-        output.append(averageRate)
+        output.append(totalRate)
         output.append(numberOrders)
+        output.append(totalAmount)
     return output
 
-# ticker = returnTicker()
-# volume = return24Volume()
-# orderBook = returnOrderBook()
-# for currency in currencies:
-#     loanOrder = returnLoanOrders(currency)
-currencies = ["LTC", "ETH", "GRC", "BTC", "DASH"]
 
-
+currencies = ["LTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
 data = []
 ticker = returnTicker()
 data = parser(ticker, data)
-print(len(data))
 volume = return24Volume()
 data = parser(volume, data)
-print(len(data))
 ob = returnOrderBook()
 data = orderBookParser(ob, data)
-print(len(data))
 cp = returnCurrencies()
 data = currenciesParser(cp, data)
-print(len(data))
 for c in currencies:
     lo = returnLoanOrders(c)
     data = loanOrderParser(lo, data)
-print(len(data))
+
+
+print len(data)
+print data
+print data[0]
+if(len(data) == 5595):
+    with open('data.txt', 'a') as outfile:
+        for i in range(0, len(data)):
+            outfile.write(str(data[i]) + ',')
+        outfile.write('\n')
