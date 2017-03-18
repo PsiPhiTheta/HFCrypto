@@ -89,31 +89,24 @@ def loanOrderParser(input, output):
         output.append(totalAmount)
     return output
 
-currencies = ["LTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
 
-while True:
-    data = []
-    ticker = returnTicker()
-    data = parser(ticker, data)
-    print(len(data))
-    volume = return24Volume()
-    data = parser(volume, data)
-    print(len(data))
-    ob = returnOrderBook()
-    data = orderBookParser(ob, data)
-    print(len(data))
-    cp = returnCurrencies()
-    data = currenciesParser(cp, data)
-    print(len(data))
-    for c in currencies:
-        lo = returnLoanOrders(c)
-        data = loanOrderParser(lo, data)
+currencies = ["BTC", "LTC", "ETH", "GRC", "DASH", "XMR", "ZEC", "REP"]
 
-    print(len(data))
+data = []
+ticker = returnTicker()
+data = parser(ticker, data)
+print(len(data))
+volume = return24Volume()
+data = parser(volume, data)
+print(len(data))
+ob = returnOrderBook()
+data = orderBookParser(ob, data)
+print(len(data))
+cp = returnCurrencies()
+data = currenciesParser(cp, data)
+print(len(data))
+for c in currencies:
+    lo = returnLoanOrders(c)
+    data = loanOrderParser(lo, data)
 
-    if(len(data) == 1982):
-        with open('data.txt', 'a') as outfile:
-            for i in range(0, len(data)):
-                outfile.write(str(data[i]) + ',')
-            outfile.write('\n')
-        time.sleep(298)
+print(len(data))
