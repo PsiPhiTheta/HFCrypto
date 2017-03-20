@@ -8,4 +8,3 @@ with open('data.txt') as f:
         currentline = currentline[0:len(currentline) - 1]
         data = np.vstack((data, currentline))
 print(data.shape)
-print(data[0][1])

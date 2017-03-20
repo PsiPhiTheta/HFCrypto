@@ -108,12 +108,15 @@ while True:
     for c in currencies:
         lo = returnLoanOrders(c)
         data = loanOrderParser(lo, data)
-
     print(len(data))
+
 
     if(len(data) == 1982):
         with open('data.txt', 'a') as outfile:
             for i in range(0, len(data)):
                 outfile.write(str(data[i]) + ',')
             outfile.write('\n')
+        time.sleep(298)
+    else:
+        print(str(len(data) - 1928))
         time.sleep(298)
