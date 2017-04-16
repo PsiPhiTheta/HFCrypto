@@ -138,7 +138,7 @@ Disadvantages: may be extremely hard to code (requires AI analysis and translati
 
 > Include consensus: YES (Tom, ?, ?)
 
-(to expand_
+(to expand)
 
 # Sources
 
