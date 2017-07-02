@@ -12,7 +12,7 @@ for exchange in exchanges:
     for feature in features:
         try:
             result.append(float(data[exchange][feature]))
-        except (RuntimeError, TypeError, NameError):
-            result.append(result.append(float('nan')))
+        except (RuntimeError, TypeError, NameError, KeyError):
+            result.append(float('nan'))
 
 print(result)
