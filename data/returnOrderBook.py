@@ -12,14 +12,22 @@ result = []
 
 try:
     for exchange in exchanges:
-        for feature in features:
-            for li in data[exchange][feature]:
-                for numb in li:
-                    result.append(float(numb))
-        result.append(float(data[exchange]['isFrozen']))
-        result.append(float(data[exchange]['seq']))
-except(KeyboardInterrupt):
-    quit()
+        try:
+            for feature in features:
+                for li in data[exchange][feature]:
+                    for numb in li:
+                        result.append(float(numb))
+            try:
+                result.append(float(data[exchange]['isFrozen']))
+            except:
+                result.append((float('nan')))
+            try:
+                result.append(float(data[exchange]['seq']))
+            except:
+                result.append((float('nan')))
+        except():
+            result.append(20 * [float('nan')])
 except():
-    result.append(float('nan'))
+    result.append(40 * [float('nan')])
+
 print(result)
