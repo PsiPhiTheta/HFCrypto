@@ -11,7 +11,7 @@ An altcoin cryptocurrency high frequency trading algorithm
 3. pandas - `sudo pip3 install pandas` - Numerical module
 4. beautifulsoup - `sudo pip3 install beautifulsoup4` - Module for web parser
 
-# I recommend using pyCharm
+*I recommend using pyCharm*
 
 
 ## Troubleshooting
