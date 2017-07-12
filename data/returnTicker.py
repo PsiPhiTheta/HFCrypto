@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 
 url = "https://poloniex.com/public?command=returnTicker"
 features = ['last', 'quoteVolume', 'high24hr', 'isFrozen', 'highestBid', 'percentChange', 'low24hr', 'lowestAsk', 'id', 'baseVolume']
@@ -11,7 +12,7 @@ result = []
 for exchange in exchanges:
     for feature in features:
         try:
-            result.append(float(data[exchange][feature]))
+            result.append(pd.to_numeric(data[exchange][feature], 'coerce'))
         except KeyboardInterrupt:
             quit()
         except:
