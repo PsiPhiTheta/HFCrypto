@@ -23,7 +23,8 @@ for exchange in exchanges:
                     except:
                         result.append(float('nan'))
         except:
-            result.append(20 * [float('nan')]) # 2 * depth = 20
+            for i in range(0, 20): # 2 * depth = 20
+                result.append(float('nan'))
     try:
         result.append(pd.to_numeric(data[exchange]['isFrozen'], 'coerce'))
     except:
