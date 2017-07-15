@@ -15,4 +15,7 @@ output = soup.find("span", {"class": "text-emphasized"}).get_text(strip=True)
 # sys.stdout = data.txt
 # print output.prettify()
 # time.sleep(300)
-print(output)
+
+
+def returnResult():
+    return(output)

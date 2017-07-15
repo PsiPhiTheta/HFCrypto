@@ -17,12 +17,14 @@ for exchange in exchanges:
         except (TypeError, NameError, KeyError, ValueError):
             result.append(float('nan'))
 
-for total in totals:
-    try:
-        result.append(pd.to_numeric(data[total], 'coerce'))
-    except (KeyboardInterrupt):
-        quit()
-    except:
-        result.append(float('nan'))
 
-print(result)
+def returnResult():
+    for total in totals:
+        try:
+            result.append(pd.to_numeric(data[total], 'coerce'))
+        except (KeyboardInterrupt):
+            quit()
+        except:
+            result.append(float('nan'))
+
+    return(result)

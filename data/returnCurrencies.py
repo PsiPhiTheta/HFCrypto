@@ -9,11 +9,13 @@ response = requests.get(url)
 data = response.json()
 result = []
 
-for currency in currencies:
-    for feature in features:
-        try:
-            result.append(pd.to_numeric(data[currency][feature], 'coerce'))
-        except:
-            result.append(float('nan'))
 
-print(result)
+def returnResult():
+    for currency in currencies:
+        for feature in features:
+            try:
+                result.append(pd.to_numeric(data[currency][feature], 'coerce'))
+            except:
+                result.append(float('nan'))
+
+    return(result)

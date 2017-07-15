@@ -9,13 +9,16 @@ exchanges = ['USDT_REP', 'BTC_XVC', 'BTC_PINK', 'BTC_SYS', 'BTC_EMC2', 'BTC_RADS
 response = requests.get(url)
 data = response.json()
 result = []
-for exchange in exchanges:
-    for feature in features:
-        try:
-            result.append(pd.to_numeric(data[exchange][feature], 'coerce'))
-        except KeyboardInterrupt:
-            quit()
-        except:
-            result.append(float('nan'))
 
-print(result)
+
+def returnResult():
+    for exchange in exchanges:
+        for feature in features:
+            try:
+                result.append(pd.to_numeric(data[exchange][feature], 'coerce'))
+            except KeyboardInterrupt:
+                quit()
+            except:
+                result.append(float('nan'))
+
+    return result
