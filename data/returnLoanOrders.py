@@ -6,15 +6,11 @@ url = 'https://poloniex.com/public?command=returnLoanOrders&currency='
 currencies = ["LTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
 features = ['txFee', 'minConf', 'disabled', 'delisted', 'frozen']
 
-result = []
-
-
 def returnResult():
+    result = []
     for currency in currencies:
         response = requests.get(url + currency)
         data = response.json()
-
-
         # Offers of each of the hardcoded currencies
         offerRate = 0
         offerAmount = 0

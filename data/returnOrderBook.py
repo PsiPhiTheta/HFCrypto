@@ -15,12 +15,10 @@ exchanges = ['USDT_REP', 'BTC_XVC', 'BTC_PINK', 'BTC_SYS', 'BTC_EMC2', 'BTC_RADS
              'ETH_ETC', 'XMR_LTC', 'BTC_ARDR', 'BTC_EXP', 'USDT_XRP', 'BTC_GAME', 'BTC_PPC', 'XMR_BCN', 'USDT_STR']
 features = ['bids', 'asks']
 
-response = requests.get(url)
-data = response.json()
-result = []
-
-
 def returnResult():
+    response = requests.get(url)
+    data = response.json()
+    result = []
     for exchange in exchanges:
         for feature in features:
             try:

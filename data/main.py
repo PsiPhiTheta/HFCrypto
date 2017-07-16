@@ -14,19 +14,25 @@ while(True):
     with open('data.txt', 'a') as outfile:
         numberFeatures = 0
         outfile.write(str(actualTime))
-        for i in returnOrderBook.returnResult():
+        resultOrderBook = returnOrderBook.returnResult()
+        resultTicker = returnTicker.returnResult()
+        resultLoanOrders = returnLoanOrders.returnResult()
+        result24hVolume = return24hVolume.returnResult()
+        resultCurrencies = returnCurrencies.returnResult()
+
+        for i in resultOrderBook:
             numberFeatures += 1
             outfile.write(str(i) + ',')
-        for i in returnCurrencies.returnResult():
+        for i in resultCurrencies:
             numberFeatures += 1
             outfile.write(str(i) + ',')
-        for i in return24hVolume.returnResult():
+        for i in result24hVolume:
             numberFeatures += 1
             outfile.write(str(i) + ',')
-        for i in returnLoanOrders.returnResult():
+        for i in resultLoanOrders:
             numberFeatures += 1
             outfile.write(str(i) + ',')
-        for i in returnTicker.returnResult():
+        for i in resultTicker:
             numberFeatures += 1
             outfile.write(str(i) + ',')
         for i in githubParser.returnResult():
