@@ -18,5 +18,9 @@ An altcoin cryptocurrency high frequency trading algorithm
 
 1. Make sure you have latest version of pip3:
     `sudo -H pip3 install --upgrade pip`
-1. pyCharm does not import installed modules:
+2. pyCharm does not import installed modules:
     Go to preferences -> Project: HFCrypto -> Project: Interpreter and set the right path to the modules.
+    
+## Telegram
+
+The main bot used can be found: @HFCryptoBot on the Telegram platform
