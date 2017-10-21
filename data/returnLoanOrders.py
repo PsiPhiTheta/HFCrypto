@@ -3,14 +3,21 @@ import pandas as pd
 
 url = 'https://poloniex.com/public?command=returnLoanOrders&currency='
 
-currencies = ["LTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
+currencies = ["BTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
 features = ['txFee', 'minConf', 'disabled', 'delisted', 'frozen']
 
 def returnResult():
     result = []
     for currency in currencies:
-        response = requests.get(url + currency)
-        data = response.json()
+        try:
+            response = requests.get(url + currency)
+            data = response.json()
+        except:
+            for i in range(0, 4):
+                result.append(float('nan'))
+            print("returnLoanOrders failed for currency " + currency + ", appending nan: " + str(len(result)))
+            continue
+
         # Offers of each of the hardcoded currencies
         offerRate = 0
         offerAmount = 0
@@ -29,7 +36,7 @@ def returnResult():
         except:
             for i in range(0,4):
                 result.append(float('nan'))
-            break
+            continue
 
         # Demands of each of the HC'd currencies
         demandRate = 0
@@ -46,4 +53,5 @@ def returnResult():
         except(ZeroDivisionError):
             result.append(float(0))
 
+    print("returnLoanOrders: " + str(len(result)))
     return(result)

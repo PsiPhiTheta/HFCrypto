@@ -16,9 +16,15 @@ exchanges = ['USDT_REP', 'BTC_XVC', 'BTC_PINK', 'BTC_SYS', 'BTC_EMC2', 'BTC_RADS
 features = ['bids', 'asks']
 
 def returnResult():
-    response = requests.get(url)
-    data = response.json()
     result = []
+    try:
+        response = requests.get(url)
+        data = response.json()
+    except:
+        for i in range(0, 3780):
+            result.append(float('nan'))
+        print("returnOrderBook failed, appending nan: " + str(len(result)))
+        return result
     for exchange in exchanges:
         for feature in features:
             try:
@@ -40,4 +46,5 @@ def returnResult():
         except:
             result.append(float('nan'))
 
+    print("returnOrderBook: " + str(len(result)))
     return result

@@ -6,9 +6,15 @@ exchanges = ['USDT_REP', 'BTC_XVC', 'BTC_PINK', 'BTC_SYS', 'BTC_EMC2', 'BTC_RADS
 totals = ['totalBTC', 'totalETH', 'totalUSDT', 'totalXMR', 'totalXUSD']
 
 def returnResult():
-    response = requests.get(url)
-    data = response.json()
     result = []
+    try:
+        response = requests.get(url)
+        data = response.json()
+    except:
+        for i in range(0, 180):
+            result.append(float('nan'))
+        print("return24hVolume failed, appending nan: " + str(len(result)))
+        return result
     for exchange in exchanges:
         for key, value in data[exchange].items():
             try:
@@ -16,15 +22,5 @@ def returnResult():
             except (TypeError, NameError, KeyError, ValueError):
                 result.append(float('nan'))
 
-
-    def returnResult():
-        for total in totals:
-            try:
-                result.append(pd.to_numeric(data[total], 'coerce'))
-            except (KeyboardInterrupt):
-                quit()
-            except:
-                result.append(float('nan'))
-
-
+    print("return24hVolume: " + str(len(result)))
     return(result)

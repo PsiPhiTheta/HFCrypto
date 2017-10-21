@@ -7,9 +7,15 @@ currencies = ['OPAL', 'MYR', 'BBR', 'LTBC', 'LBC', 'NOXT', 'DRKC', 'SUN', 'BITUS
 features = ['txFee', 'minConf', 'disabled', 'delisted', 'frozen']
 
 def returnResult():
-    response = requests.get(url)
-    data = response.json()
     result = []
+    try:
+        response = requests.get(url)
+        data = response.json()
+    except:
+        for i in range(0, 1325):
+            result.append(float('nan'))
+        print("returnCurrencies failed, appending nan: " + str(len(result)))
+        return result
     for currency in currencies:
         for feature in features:
             try:
@@ -17,4 +23,5 @@ def returnResult():
             except:
                 result.append(float('nan'))
 
+    print("returnCurrencies: " + str(len(result)))
     return(result)
