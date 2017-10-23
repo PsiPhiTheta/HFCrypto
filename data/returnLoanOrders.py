@@ -1,11 +1,13 @@
 import requests
 import pandas as pd
+from timeout import timeout
 
 url = 'https://poloniex.com/public?command=returnLoanOrders&currency='
 
 currencies = ["BTC", "ETH", "GRC", "BTC", "DASH", "XMR", "ZEC", "REP"]
 features = ['txFee', 'minConf', 'disabled', 'delisted', 'frozen']
 
+@timeout(50)
 def returnResult():
     result = []
     for currency in currencies:

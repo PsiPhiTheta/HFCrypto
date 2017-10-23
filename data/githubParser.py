@@ -2,7 +2,9 @@ import requests
 import sys
 import time
 from bs4 import BeautifulSoup
+from timeout import timeout
 
+@timeout(50)
 def returnResult():
     url = 'https://github.c/gridcoin/Gridcoin-Research'
     try:

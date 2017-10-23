@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+from timeout import timeout
 
 url = 'https://poloniex.com/public?command=returnOrderBook&currencyPair=all&depth=10'
 
@@ -15,6 +16,7 @@ exchanges = ['USDT_REP', 'BTC_XVC', 'BTC_PINK', 'BTC_SYS', 'BTC_EMC2', 'BTC_RADS
              'ETH_ETC', 'XMR_LTC', 'BTC_ARDR', 'BTC_EXP', 'USDT_XRP', 'BTC_GAME', 'BTC_PPC', 'XMR_BCN', 'USDT_STR']
 features = ['bids', 'asks']
 
+@timeout(50)
 def returnResult():
     result = []
     try:
