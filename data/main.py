@@ -92,4 +92,4 @@ while(True):
 
         outfile.write('\n')
         print("Number of features: " + str(numberFeatures) + " | Time: " + time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()))
-        time.sleep(300 - (time.time() - actualTime))
+        time.sleep(300 - (300 % abs(time.time() - actualTime)))
